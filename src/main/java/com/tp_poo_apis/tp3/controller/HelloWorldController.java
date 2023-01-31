@@ -19,4 +19,10 @@ public class HelloWorldController {
         model.addAttribute("nomTemplate", nameGET);
         return "addresses";
     }
+    @GetMapping("/addresse")
+    public String addresse(@RequestParam(name="name", required=false, defaultValue="World") String
+                                    nameGET, Model model) {
+        model.addAttribute("nomTemplate", nameGET);
+        return "addresse";
+    }
 }
